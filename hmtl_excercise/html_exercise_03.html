@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        
+        body {
+            font-size: large;
+            text-align: center;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            font-size: xx-large;
+            color: #003249;
+            font-family: fantasy;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        nav a {
+            color: #0a5e84;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        figure {
+            display: inline-block;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        figure img {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        figcaption {
+            font-size: smaller;
+            color: #666;
+        }
+        iframe {
+            border: none;
+            max-width: 100%;
+        }
+        form {
+            margin: 0 auto;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #0a5e84;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #003249;
+        }
+        .twitter-tweet {
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>
+            Hi! My name is <strong>Jake</strong>. I'm a student and trying out <abbr title="HTML and CSS">CODING</abbr>.
+            <br>Learn more about me: 
+            <nav>
+                <a href="#Images">Images</a>
+                <a href="#Map">Map</a>
+                <a href="#Registration">Registration</a>
+                <a href="#Socials">Socials</a>
+                <a href="#About">About</a>
+                <a href="#Contact">Contact</a>
+            </nav>
+        </p>
+    </header>
+
+    <section id="Images">
+        <h2>My Fav Pics</h2>
+        <figure onclick="toggleFullscreen(this)">
+            <img src="image" alt="description of the image" width="200">
+            <figcaption>caption of image</figcaption>
+        </figure>
+        <!-- You can add more dog images here -->
+    </section>
+
+    <section id="Map">
+        <h2>My Hometown</h2>
+        <p>This is a map of where I live.</p>
+        <iframe src="link if the google map" frameborder="0" width="100%" height="450" allowfullscreen></iframe>
+    </section>
+
+    <section id="Registration">
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required><br>
+        
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" pattern="[0-9]{11}" required><br>
+        
+            <label for="date">Date</label>
+            <input type="date" id="date" required><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section id="Socials">
+        <h2>Twitter Feed</h2>
+        <!-- Twitter embeds can go here -->
+    </section>
+
+    <section id="About">
+        <h2>About Me</h2>
+        <p>This is where you can find my resume.</p>
+        <a href="Resume.html">View my resume</a>
+    </section>
+
+    <section id="Contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me through the following channels:</p>
+        <ul>
+            <li>Email: jake.yubos.52@gmail.com</li>
+            <li>Phone: (63+) 977-602-6315</li>
+        </ul>
+    </section>
+
+    <script>
+        function toggleFullscreen(element){
+            if(!document.fullscreenElement){
+                element.requestFullscreen().catch(err => {
+                    console.error('Error toggling fullscreen:', err);
+                });
+            }else{
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
